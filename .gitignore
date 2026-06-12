@@ -1,0 +1,29 @@
+# data and pipeline output
+data/
+shards/
+plots/
+*.h5
+
+# OT / classifier / paper-figure code (kept in a separate analysis repo)
+ot_classify.py
+make_plots.py
+run_pipeline.py
+
+# python and build artifacts
+__pycache__/
+*.pyc
+*.pyo
+cpp/spsolver_cpp
+cpp/spsolver_cpp*.so
+
+# calibration plots, ad-hoc files
+offsets.png
+
+# HPC logs / generated manifest
+hpc/logs/
+hpc/manifest.txt
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
