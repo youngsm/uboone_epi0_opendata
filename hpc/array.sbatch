@@ -2,7 +2,7 @@
 #SBATCH --job-name=pilarnet
 #SBATCH --partition=roma
 #SBATCH --account=neutrino:ml-dev
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=01:00:00
 #SBATCH --output=hpc/logs/array_%A_%a.out
