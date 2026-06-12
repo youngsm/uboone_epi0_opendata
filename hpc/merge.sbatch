@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=pilarnet-merge
-#SBATCH --partition=roma
+#SBATCH --partition=milano
 #SBATCH --account=neutrino:ml-dev
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
