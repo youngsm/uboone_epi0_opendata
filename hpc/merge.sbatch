@@ -10,7 +10,7 @@
 # Run after the array completes. From the repo root:
 #   sbatch --dependency=afterok:<ARRAY_JOB_ID> hpc/merge.sbatch
 
-set -euo pipefail
+set -eo pipefail               # no `-u`: conda binutils activate hook trips it
 cd "$SLURM_SUBMIT_DIR"
 
 source "$(conda info --base)/etc/profile.d/conda.sh"

@@ -10,7 +10,8 @@
 # Array range: set via --array=1-N on submission; N = wc -l manifest.txt
 # Example:    sbatch --array=1-$(wc -l < hpc/manifest.txt) hpc/array.sbatch
 
-set -euo pipefail
+set -eo pipefail               # NB: no `-u`; conda's binutils activate hook
+                               # references $ADDR2LINE unguarded and trips it.
 cd "$SLURM_SUBMIT_DIR"
 mkdir -p hpc/logs shards
 
